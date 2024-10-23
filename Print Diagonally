@@ -1,0 +1,33 @@
+https://www.geeksforgeeks.org/problems/print-diagonally4331/1?page=3&category=Matrix&sortBy=submissions
+
+
+
+
+
+
+class Solution{
+	
+	public:
+	vector<int> downwardDiagonal(int N, vector<vector<int>> A)
+	{
+		vector<int>ans;
+	    for(int i=0;i<N;i++){
+	        int x=0,y=i;
+	        while(x>=0&&x<N&&y>=0&&y<N){
+	            ans.push_back(A[x][y]);
+	            x++;
+	            y--;
+	        }
+	    }
+	    for(int i=1;i<N;i++){
+	        int x=i,y=A.size()-1;
+	        while(x>=0&&x<N&&y>=0&&y<N){
+	            ans.push_back(A[x][y]);
+	            x++;
+	            y--;
+	        }
+	    }
+	    return ans;// Your code goes here
+	}
+
+};
